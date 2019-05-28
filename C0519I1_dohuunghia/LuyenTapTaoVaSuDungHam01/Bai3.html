@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "one" placeholder="Nhap so thu nhat">
+<input type="text" id = "two" placeholder="Nhap so thu hai">
+<button onclick="TwoNumber1()">Click</button>
+<script>
+    function TwoNumber(numberOne, numberTwo) {
+        if( numberOne > numberTwo){
+            alert(numberOne + " lon hon " + numberTwo);
+        } else {
+            alert("Tong hai so la " +(numberTwo + numberOne));
+        }
+    }
+    function TwoNumber1() {
+        let a = parseInt(document.getElementById("one").value);
+        let b = parseInt(document.getElementById("two").value);
+        TwoNumber(a,b);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "number" placeholder="Nhap mot so">
+<button onclick="Number1()">Click</button>
+<script>
+    function Number(a) {
+        return a + 1;
+    }
+    function Number1() {
+        let b = Number(parseInt(document.getElementById("number").value));
+        document.getElementById("number1").innerHTML = "Tang gia tri la " + b;
+    }
+</script>
+<p id = "number1"></p>
+</body>
+</html>

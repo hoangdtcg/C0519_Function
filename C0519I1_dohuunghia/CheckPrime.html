@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "Number">
+<button onclick="check()">Check</button>
+<script>
+    function checkPrime(number) {
+        if( number < 2){
+            return false;
+        } else {
+            for ( let i = 2; i < number; i++){
+                if ( number % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    function check() {
+        let a = parseInt(document.getElementById("Number").value);
+        if (checkPrime(a)){
+            document.getElementById("Number1").innerHTML = a + " la so nguyen to";
+        } else {
+            document.getElementById("Number1").innerHTML = a + " khong la so nguyen to";
+        }
+    }
+</script>
+<p id = "Number1"></p>
+</body>
+</html>

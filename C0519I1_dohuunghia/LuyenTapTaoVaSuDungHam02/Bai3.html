@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "numBer" placeholder="Nhap so muon tinh giai thua">
+<button onclick="displayFactorial()">Factorial</button>
+<script>
+    function factorial(number) {
+        let factorial1 = 1;
+        for ( let i = 1; i <= number; i++){
+            factorial1 *= i;
+        }
+        return factorial1;
+    }
+    function displayFactorial() {
+        let a = document.getElementById("numBer").value;
+        document.getElementById("number1").innerHTML = "Giai thua cua " + a + " la " + factorial(a);
+    }
+</script>
+<p id = "number1"></p>
+</body>
+</html>
