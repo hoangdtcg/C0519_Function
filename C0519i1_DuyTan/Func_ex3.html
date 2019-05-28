@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let firstNum = prompt("Nhap vao so thu nhat: ");
+    let secondNum = prompt("Nhap vao so thu hai: ");
+    f(firstNum,secondNum);
+    function f(firstNum,secondNum) {
+        firstNum = parseInt(firstNum);
+        secondNum = parseInt(secondNum);
+        let sum = firstNum + secondNum;
+        if (firstNum > secondNum) {
+            alert("So thu nhat lon hon so thu hai");
+            return;
+        }
+
+        alert("Tong cua 2 so la: " + sum)
+    }
+</script>
+</body>
+</html>

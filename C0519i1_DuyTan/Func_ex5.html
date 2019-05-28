@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let NameOfStars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let OtherNameOfStars = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let keyword = prompt('Nhap ten ngoi sao ban muon tim:');
+    findNameOfStars(keyword);
+
+    function findNameOfStars(keyword) {
+        for (let i = 0; i < NameOfStars.length; i++) {
+            if (keyword === NameOfStars[i]) {
+                alert(OtherNameOfStars[i]);
+                return;
+            }
+        }
+        alert("Ngoi sao ban vua nhap khong ton tai");
+    }
+</script>
+</body>
+</html>
