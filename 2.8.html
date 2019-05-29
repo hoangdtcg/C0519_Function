@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+            <input id="number" >
+            <button type="button" onclick="addNumber()" >Click ADD</button>
+            <button onclick="reverseArray()"> Reverse</button>
+            <p id="result"></p>
+
+
+                <script>
+                    let x = 0;
+                    let arr = Array();
+                    function addNumber() {
+                        arr[x] = document.getElementById("number").value;
+                        console.log(arr[x]);
+                        // alert("E " + arr[x] + "index" + x);
+                        x++;
+                        document.getElementById("number").value = "";
+                        document.getElementById("result").innerHTML = arr.toString();
+
+                    }
+
+                    function reverseArray() {
+                        arr.reverse();
+                        let rev = "";
+                        for(let i = 0; i < arr.length; i++){
+                            rev += "Element " + i + " is " + arr[i] + "<br>";
+                        }
+                        document.getElementById("result").innerHTML = rev;
+                    }
+
+                </script>
+</body>
+</html>

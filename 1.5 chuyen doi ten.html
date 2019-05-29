@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngoi sang doi thanh vi sao</title>
+</head>
+<body>
+            <script>
+                function find_Name(arr,name) {
+                    for(let i = 0; i < arr.length; i++){
+                        if(name === arr[i]){
+                            return i;
+                        }
+                    }
+                    return -1;
+                }
+
+                let idol = ["Polaris", "Aldebaran", "Deneb", "Vega"," Altair", "Dubhe" ,"Regulus"];
+                let star = ["Ursa Minor", "Tarurus", "Cygnus","Lyra", "Aquila", "Ursa", "Major","Leo"];
+                let name = prompt("Input find vale");
+                let index = find_Name(idol,name);
+                if(index != -1){
+                    alert(star[index]);
+                }else{
+                    alert(" Not find value")
+                }
+            </script>
+</body>
+</html>
