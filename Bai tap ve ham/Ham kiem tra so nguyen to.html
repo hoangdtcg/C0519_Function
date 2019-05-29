@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function numPrime(n){
+        //var n;
+        for( let i=2;i<n;i++){
+            if(n%i===0){
+                return false;
+            }
+            return true;
+        }
+    }
+    function printPrime(){
+        for(let j=2;j<1000;j++){
+            if(numPrime(j)===true){
+                document.write(j+"<br>");
+            }
+        }
+    }
+    printPrime();
+</script>
+
+</body>
+</html>

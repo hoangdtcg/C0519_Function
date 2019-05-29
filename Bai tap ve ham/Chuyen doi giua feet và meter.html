@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <h1> Gia tri feet</h1>
+    <input type="text" name="Feet"></input><br>
+    <input type="button" value="Changle" onclik="Click_one()">
+    <h2>Gia tri meter</h2>
+    <input type="text" name="Meter"></input><br>
+    <input type="button" value="Changle" onclick="Click_two()">
+</form>
+<body>
+<script>
+    function Click_one(){
+        let foot1= document.getElementById("Feet").value;
+        let meter1= 0.305*foot1;
+        doc.getElementById("Meter").innerHTML= meter;
+    }
+function Click_two() {
+        let meter2= document.getElementById("Meter").value;
+        let foot2= 3.279 * meter;
+        doc.getElementById("Feet").innerHTML=foot2;
+}
+</script>
+
+</body>
+</html>
