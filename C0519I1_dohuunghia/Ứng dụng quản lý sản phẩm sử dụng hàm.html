@@ -42,7 +42,7 @@
     function addFruits() {
         let fruitAdd = document.getElementById("fruit1").value;
         listFruits.push(fruitAdd);
-        document.getElementById("fruit").innerHTML = "Fruits are : " + listFruits;
+        displayFruits();
     }
 
     function editFruits() {
@@ -54,20 +54,19 @@
                 break;
             }
         }
-        document.getElementById("fruit").innerHTML = "Fruits are : " + listFruits;
+       displayFruits();
     }
 
     function removeFruit() {
         let fruitRemove = document.getElementById("fruit3").value;
-        let i;
-        for ( let j = 0; j < listFruits.length; j++){
-            if (fruitRemove === listFruits[j]){
-                i = j;
+        let i = 0;
+        for (; i < listFruits.length; i++){
+            if (fruitRemove === listFruits[i]){
                 break;
             }
         }
         listFruits.splice(i,1," ");
-        document.getElementById("fruit").innerHTML = "Fruits are : " + listFruits;
+        displayFruits();
     }
 
 </script>
