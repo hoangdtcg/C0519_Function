@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//tim so nho nhat
+    function min(a, b, c) {
+        let number = [a, b, c];
+        let min=number[0] ;
+
+        for (i = 0; i < number.length; i++) {
+            if (min > number[i]) {
+                min = number[i];
+                return;
+            }
+        }
+        return min;
+
+
+    }
+
+    alert(min(4, 6, 9));
+</script>
+
+</body>
+</html>

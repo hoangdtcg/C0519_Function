@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+SO 1:
+<input id="number1" type="number">
+SO 2
+<input id="number2" type="number">
+<input type="button" onclick="display()" value="Check">
+
+<script>
+
+    function display() {
+        let a = parseFloat(document.getElementById("number1").value);
+        let b = parseFloat(document.getElementById("number2").value);
+        if (a>b){
+            alert(a + ">" + b);
+            return;
+        }
+        alert(a+b);
+    }
+
+</script>
+
+</body>
+</html>

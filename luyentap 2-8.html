@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function swap(arr) {
+        for (i = 0; i < arr.length; i++) {
+            for (j = arr.length - 1; j >= 0; j--) {
+                let result = arr[i];
+                arr[i] = arr[j];
+                arr[j] = result;
+
+            }
+        }
+
+        return arr;
+
+    }
+
+    let arr = [5,6,7,8];
+
+    document.write(swap(arr));
+
+</script>
+
+<!--<script>-->
+<!--    function swaps(a,b,c,d) {-->
+<!--        let number=[a,b,c,d];-->
+<!--        let number2=[x,y,z,t];-->
+<!--        for (i=number.length-1;i>=0;i&#45;&#45;){-->
+<!--            for (j=0;j<number2.length;j++)-->
+<!--                number2[j]=number[i];-->
+<!--            return;-->
+<!--        }-->
+
+<!--    }-->
+<!--    document.write(swap(5,6,7,8));-->
+<!--</script>-->
+
+</body>
+</html>

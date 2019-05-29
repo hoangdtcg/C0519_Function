@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="number" type="number">
+<button id="change" onclick="change()"> Exchange</button>
+<br>
+<select id="units">
+    <option id="met" value="metter"> Metter</option>
+    <option id="feet" value="feet"> Feet</option>
+</select>
+<p id="result"></p>
+<script>
+
+    function change() {
+        let count = document.getElementById("units").value;
+
+        let unit = parseFloat(document.getElementById("number").value);
+        if (count == "metter") {
+            result = unit * 0.305;
+            alert('ket qua la '+result+"feet")
+        }
+        if (count = "feet") {
+            result = unit * 3.279;
+            alert('ket qua la '+result+"metter");
+
+        }
+
+
+    }
+</script>
+
+
+</body>
+</html>
