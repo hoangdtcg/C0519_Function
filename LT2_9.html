@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [2, 4, 7, 4, 6, 8, 56, 7, 3, 67, 0, -5];
+    let b = 4;
+    let count = 0;
+
+    function indexofArr(arr1, keyword) {
+        for (let i = 0; i < arr1.length; i++) {
+            if (keyword === arr1[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    indexofArr(arr, b);
+    if (count == 0) {
+        alert(-1);
+    } else {
+        alert(count);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function acreage(num) {
+        acr = (Math.PI*num*num).toFixed(2);
+        return acr;
+    }
+    function area(num) {
+        are = (Math.PI*2*num).toFixed(2);
+        return are;
+    }
+    let R = parseFloat(prompt("Nhap vao ban kinh"));
+    acreage(R)
+    area(R)
+    alert("Dien tich hinh tron co ban kinh " + acr )
+    alert("Chu vi hinh tron co ban kinh " + are)
+</script>
+</body>
+</html>
