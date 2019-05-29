@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>ADD NEW PRODUCT</h1>
+    <input  id="nhap">
+    <button onclick="ADDproduct()">ADD</button>
+    <button onclick="display()">display</button>
+    <br>
+    <input id="delete">
+    <button onclick="Delete()" >delete</button><br>
+    <p>please enter index of element to delete</p>
+    <input>
+    <p id="result">result</p>
+
+
+    <script>
+        let Product = [];
+        x=0;
+
+
+        function ADDproduct() {
+            Product[x] = document.getElementById("nhap").value;
+            x++;
+
+        }
+        function display() {
+            let data = " ";
+           for(let i=0;i<Product.length;i++){
+               data += Product[i]+",";
+           }
+            document.getElementById("result").innerHTML = data;
+        }
+        function Delete() {
+
+            let index= parseInt(document.getElementById("delete").value);
+            for(i=0;i<Product.length;i++){
+                if(Product[index]=== Product[i]){
+                    Product.splice(index,1);
+
+                }
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

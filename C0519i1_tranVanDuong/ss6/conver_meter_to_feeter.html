@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h> CONVERT METERS TO FEET</h>
+<input id="m" type="number" placeholder="meters"
+    oninput="Convert(this.value)">
+<p id="display"> Result</p>
+<script>
+    function Convert(M) {
+        M = parseInt(document.getElementById("m").value);
+        let Ft= 3.279*M;
+        document.getElementById("display").innerHTML = Ft;
+    }
+
+</script>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ADD NEW PRODUCT</h1>
+<input id="nhap">
+<button onclick="ADDproduct()">ADD</button>
+<button onclick="display()">display</button>
+<br>
+<h>DISPLAY ALL PRODUCT</h>
+<script>
+    let sout;
+    sout = "<table border='1' width='300' cellpadding='3' cellspacing='0'>";
+    let Product = [];
+    let x = 0;
+
+    function ADDproduct() {
+
+
+        Product[x] = document.getElementById("nhap").value;
+        x++;
+        sout += "<td>" + Product[x];
+
+
+    }
+
+
+</script>
+
+</body>
+</html>

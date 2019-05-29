@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap"> nhap so can tinh giai thua
+<button onclick="displayGiaiThua()">click</button>
+<p id="display"></p>
+
+
+<script>
+    function tinhgiaithua(x) {
+        let giaithua = 1;
+        for (let i = 1; i <= x; i++) {
+            giaithua *= i;
+        }
+        return giaithua;
+    }
+
+    function displayGiaiThua() {
+        let a = parseInt(document.getElementById("nhap").value);
+        document.getElementById("display").innerHTML = tinhgiaithua(a);
+    }
+
+</script>
+
+</body>
+</html>

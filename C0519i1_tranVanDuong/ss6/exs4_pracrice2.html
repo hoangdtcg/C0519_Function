@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap"> nhap 1 so bat ki
+<button onclick="display()">click</button>
+<p id="display"></p>
+<script>
+    function Check(a) {
+        console.log(typeof (a));
+        if (typeof (a) === 'number') {
+
+            return true;
+        }
+        return false;
+    }
+    function display() {
+        let x = document.getElementById("nhap").value;
+        if(Check(x)){
+            document.getElementById("display").innerHTML = "true";
+        } else {
+            document.getElementById("display").innerHTML =  "false";
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
