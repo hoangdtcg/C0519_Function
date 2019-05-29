@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap3_5SS6</title>
+</head>
+<body>
+<script>
+    let ngoisao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function findGalaxy(name, ngoisao) {
+        for (let i=0; i < ngoisao.length; i++) {
+            if ( ngoisao[i] === name ) {
+                return chomsao[i];
+            }
+        }
+    }
+    let name = prompt("nhap ten ngoi sao");
+    let result = findGalaxy(name, ngoisao);
+    console.log(result)
+</script>
+</body>
+</html>
