@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Check Number is Prime</label><br>
+        <input id="prime" type="text"  placeholder="Enter a number"><br><br>
+        <button type="button" onclick="isPrime()">Check</button>
+    </p>
+    <p>Result: <span id="output"></span> </p>
+</form>
+<script>
+
+    function isPrime(num) {
+        let flag = true;
+        if (num < 2)
+        flag = false;
+        else {
+            for (let i = 2; i < num; i ++) {
+                if (num % i == 0){
+                    flag = false;
+                }
+            }
+        }
+        if (flag == true) {
+            document.getElementById("output").innerHTML = num + " is Prime";
+        } else {
+            document.getElementById("output").innerHTML = num + " is not Prime";
+        }
+    }
+    let number = parseInt(document.getElementById("prime").value);
+    isPrime(number)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = prompt("nhap so thu nhat");
+    let number2 = prompt("nhap so thu 2");
+    function swapNumber(num1,num2) {
+        let temp = num1;
+        num1 = num2;
+        num2 = temp;
+        return num1 + "," + num2;
+    }
+    alert(swapNumber(number1,number2))
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="text-align: center">
+    <p>
+        <label>swap feet and meter</label><br><br>
+        Feet<br>
+        <input id="inputfoot" type="text" placeholder="feet" oninput="foottometer(this.value)"><br><br>
+        Meter<br>
+        <input id="inputmeter" type="text" placeholder="meter" oninput="metertofoot(this.value)">
+    </p>
+
+</form>
+<script>
+    function metertofoot(met) {
+
+        document.getElementById("inputfoot").value = met*3.279 + " feet" ;
+    }
+    function foottometer(feet) {
+
+        document.getElementById("inputmeter").value = feet*0.305 +" m";
+    }
+</script>
+</body>
+</html>
