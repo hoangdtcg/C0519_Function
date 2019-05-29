@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<tr>
+    <th>
+        <input type="text" id="feet">
+        <button onclick="feettometer()">feet to meter</button>
+        <p id="M"></p>
+    </th>
+</tr>
+<br>
+<tr>
+    <th>
+        <input type="text" id="meter">
+        <button onclick="metertofeet()">meter to feet</button>
+        <br>
+        <p id="F"></p>
+    </th>
+</tr>
+<body>
+<script>
+    function feettometer() {
+        // document.getElementById("1").innerHTML = (Number(document.getElementById("feet").value) * 0.305);
+        F = parseFloat(document.getElementById("feet").value);
+        M = F * 0.305;
+        document.getElementById("M").innerHTML = M;
+
+    }
+
+    function metertofeet() {
+        // document.getElementById("2").innerHTML = (Number(document.getElementById("meter").value) * 3.279);
+        M = parseFloat(document.getElementById("meter").value);
+        F = M * 3.279;
+        document.getElementById("F").innerHTML = F;
+    }
+
+</script>
+</body>
+</html>

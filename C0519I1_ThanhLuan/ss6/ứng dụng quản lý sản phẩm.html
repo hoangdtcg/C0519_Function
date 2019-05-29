@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<center>
+<h1>Lish Porn star</h1>
+<tr>
+    <input type="text" id="push">
+    <button onclick="addpornstar()">push</button>
+</tr>
+<br><br>
+<tr>
+    <input type="text" id="change">
+    <button onclick="editpornstar()">change</button>
+</tr>
+<br><br>
+<tr>
+    <input type="text" id="delete">
+    <button onclick="deletepornstar()">delete</button>
+</tr>
+</center>
+<body>
+<script>
+    let pornstar = ["lam", "nghia", "viet", "thong", "duong"];
+
+    function displaypornstar() {
+        document.getElementById("porn").innerHTML = "List Porn Star : " + pornstar;
+        //document.getElementById("fruit").innerHTML = "Fruits are : " + listFruits;
+    }
+
+    function addpornstar() {
+        let addpornstar1 = document.getElementById("push").value;
+        pornstar.push(addpornstar1);
+        displaypornstar();
+    }
+
+    function editpornstar() {
+        let editpornstar1 = document.getElementById("change").value;
+        for (let i = 0; i < pornstar.length; i++) {
+            if (editpornstar1() === pornstar[i]) {
+                pornstar[i] = editpornstar1;
+                break;
+            }
+        }
+        displaypornstar();
+    }
+
+    function deletepornstar() {
+        let deletepornstar1 = document.getElementById("delete");
+        let i = 0;
+        for ( ; i < pornstar.length; i++){
+            if (deletepornstar1 === pornstar[i]){
+                break;
+            }
+        }pornstar.splice(i,1," ");
+        displaypornstar();
+    }
+
+</script>
+<p id="porn"></p>
+</body>
+</html>
