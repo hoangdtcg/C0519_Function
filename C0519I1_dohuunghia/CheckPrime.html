@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id = "Number">
-<button onclick="check()">Check</button>
+<input type="text" id = "Number" placeholder="Nhap mot so">
+<button onclick="display()">Display</button>
 <script>
     function checkPrime(number) {
         if( number < 2){
@@ -20,13 +20,13 @@
             return true;
         }
     }
-    function check() {
+    function display() {
         let a = parseInt(document.getElementById("Number").value);
-        if (checkPrime(a)){
-            document.getElementById("Number1").innerHTML = a + " la so nguyen to";
-        } else {
-            document.getElementById("Number1").innerHTML = a + " khong la so nguyen to";
-        }
+       for ( let i = 2; i <= a; i++){
+           if( checkPrime(i)){
+               document.write(i + "<br>");
+           }
+       }
     }
 </script>
 <p id = "Number1"></p>
