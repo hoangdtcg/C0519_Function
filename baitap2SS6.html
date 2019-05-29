@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi</title>
+</head>
+<body>
+<input type="text" id="meter" value="met"><button onclick="changeToFeet()">Change</button><br>
+<input type="text" id="foot" value="feet"><button onclick="changeToMeter()">Change</button>
+<script>
+    function changeToFeet() {
+        M = parseFloat(document.getElementById("meter").value);
+        F = 3.279 * M;
+        alert("Giá trị cần đổi là : " + F);
+    }
+    function changeToMeter() {
+        F = parseFloat(document.getElementById("foot").value);
+        M = 0.305 * F;
+        alert("Giá trị cần đổi là : " + M);
+    }
+</script>
+</body>
+</html>

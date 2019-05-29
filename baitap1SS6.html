@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 số nguyên tố đầu tiên</title>
+</head>
+<body>
+<form>
+    <input type="text" id="number" value="0"/>
+    <input type="button" value="In kết quả" onclick="print_snt()"/>
+</form>
+<div id="result">
+</div>
+<script>
+    function kiem_tra_snt(n)
+    {
+        let flag = true;
+        if (n < 2) {
+            flag = false;
+        }
+        else if (n == 2) {
+            flag = true;
+        }
+        else if (n % 2 == 0) {
+            flag = false;
+        }
+        else {
+            for (let i = 3; i <= Math.sqrt(n); i += 2)
+            {
+                if (n % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+    function print_snt()
+    {
+        let number = document.getElementById("number").value;
+        number = parseInt(number);
+        let count = '';
+        for (let i = 1; i <= number; i++) {
+            if (kiem_tra_snt(i)){
+                count += i + ' <br/>';
+            }
+        }
+        document.getElementById("result").innerHTML = count;
+    }
+
+</script>
+</body>
+</html>
