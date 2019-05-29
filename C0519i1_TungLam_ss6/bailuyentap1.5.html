@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    stars = prompt("nhap ngoi sao")
+    let ngoisao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chumsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+
+    function check(stars) {
+        for (i = 0; i < ngoisao.length; i++) {
+
+
+            if (stars === ngoisao[i]) {
+                alert("chom sao tuong ung la: " + chumsao[i]);
+                return;
+            }
+        }
+        alert("khong co chum sao nao")
+    }
+    check(stars);
+</script>
+
+</body>
+</html>
