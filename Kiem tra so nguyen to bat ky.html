@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so nguyen to bat ky</title>
+</head>
+<body>
+<input id="number">
+<button onclick="checkSNT()"> Click here</button>
+<p id="result"></p>
+<script>
+    function prime_Random(number) {         // lap ham de tinh toan SNT
+        let flag = true;
+        if (number < 2) {
+            return false;  // return gặp sẽ thoát trương trình
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+            }
+        }
+        return flag;
+
+    }
+
+
+    function checkSNT() {               // lap ham hien thi
+        let number = document.getElementById("number").value;
+        if (prime_Random(number)) {
+            document.getElementById("result").innerHTML = number + " la so nguyen to";
+        } else {
+            document.getElementById("result").innerHTML = number + " khong la so nguyen to";
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

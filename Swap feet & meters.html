@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>swap feet & met</title>
+</head>
+            <form style="text-align: center">
+                <p>
+                    <label> Swap feet and meter</label><br><br/>
+                    <h1>Feet</h1><br/>
+                    <input id="inputF" type="text" placeholder="feet" oninput="feettometers(this.value)"><br><br>
+                    <h1>Meters</h1><br>
+                    <input id="inputM" type="text" placeholder="meter" oninput="metertofeet(this.value)">
+                </p>
+            </form>
+<body>
+        <script>
+                                    //  placeholder hien thi gioi y
+                                    // oninput nhap vao o input lay gia tri luon
+            function feettometers(number) {
+                meter = 0.305*number;
+                document.getElementById("inputM").value = meter +  " m ";
+
+            }
+            function metertofeet(number) {
+                feet = 3.279*number;
+                document.getElementById("inputF").value = feet + "feet";
+            }
+        </script>
+</body>
+</html>
