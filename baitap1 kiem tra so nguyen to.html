@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // khai bao ham
+
+    // b1 kiem tra so nhap vao co lon hon 2 hay k. neu < 2 thi return false
+    // b2 tao bien flag = true // bien nay se cam co: la SNT thi flag = true
+    // b3 dung vong lap for kiem tra
+
+
+    // goi ham kiem tra
+    number = prompt("nhap 1 so");
+
+    function check() {
+        flag = true;
+        if (number < 2) {
+            return false;
+
+        }
+        for (i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false
+            }
+        }
+        return flag;
+    }
+
+    if (check(number)) {
+        alert(number + " la so nguyen to");
+
+    } else {
+        alert(number + " khong la so nguyen to");
+    }
+
+</script>
+
+
+</body>
+</html>

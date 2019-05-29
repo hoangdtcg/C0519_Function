@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    status = prompt("insert a star: ");
+    let input = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let output = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function check(status) {
+
+        for (i = 0; i < input.length; i++) {
+
+            if (status === input[i]) {
+                alert("ngoi sao tuong ung la: " + output[i]);
+                return;
+            }
+
+        }
+        alert("khong tim thay");
+    }
+
+    check(status);
+
+
+</script>
+
+</body>
+</html>
