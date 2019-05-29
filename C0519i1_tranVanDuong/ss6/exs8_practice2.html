@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" placeholder="enter number">
+<button onclick="ADD()">ADD</button>
+<button onclick="Display()">Display</button>
+<button onclick="daonguoc()">daonguoc</button>
+<p id="result"></p>
+<p id="daonguoc"></p>
+<script>
+    let x = 0;
+    let array = [];
+
+    function ADD() {
+        array[x] = document.getElementById("nhap").value;
+        x++;
+
+    }
+
+    // function Display() {
+    //
+    //     let e = "<hr/>";
+    //     for (let i = 0; i < array.length; i++) {
+    //         e += "element" + " " + i + "is" + " :" + array[i] +"<br>";
+    //     }
+    //         document.getElementById("result").innerHTML = e;
+    //
+    // }
+    function daonguoc() {
+        let first =0;
+        let last = array.length -1;
+        while(first<last){
+            let temp = array[first];
+            array[first] = array[last];
+            array[last] = temp;
+            first++;
+            last--;
+        }
+        document.getElementById("daonguoc").innerHTML = array;
+    }
+</script>
+
+
+</body>
+</html>
