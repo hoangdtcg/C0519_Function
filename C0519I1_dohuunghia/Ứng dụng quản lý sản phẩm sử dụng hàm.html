@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #2196F3;
+        }
+        input{
+            width: 200px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Danh sách ứng dụng sản phẩm</title>
+</head>
+<body>
+<h1 style="text-align: center">Quản Lý Sản Phẩm Của Siêu Thị</h1>
+<table>
+    <tr>
+        <th><button onclick="displayFruits()">ListFruits</button></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><input type="text" id = "fruit1" placeholder="Enter the fruit you want to add"></th>
+        <th><button onclick="addFruits()">AddFruit</button></th>
+    </tr>
+    <tr>
+        <th><input type="text" id = "fruit2" placeholder="Enter the fruit you want to edit"></th>
+        <th><button onclick="editFruits()">EditFruit</button></th>
+    </tr>
+    <tr>
+        <th><input type="text" id = "fruit3" placeholder="Enter the fruit you want to remove"></th>
+        <th><button onclick="removeFruit()">RemoveFruit</button></th>
+    </tr>
+</table>
+
+<script>
+    let listFruits = ["mango" , "banana", "apple", "orange", "grape", "peaches"];
+    function displayFruits() {
+        document.getElementById("fruit").innerHTML = "Fruits are : " + listFruits;
+    }
+
+    function addFruits() {
+        let fruitAdd = document.getElementById("fruit1").value;
+        listFruits.push(fruitAdd);
+        displayFruits();
+    }
+
+    function editFruits() {
+        let fruitEdit1 = prompt("Enter the name of the fruit you want to replace");
+        let fruitEdit = document.getElementById("fruit2").value;
+        for ( let i = 0; i < listFruits.length; i++){
+            if (fruitEdit === listFruits[i]){
+                listFruits[i] = fruitEdit1;
+                break;
+            }
+        }
+       displayFruits();
+    }
+
+    function removeFruit() {
+        let fruitRemove = document.getElementById("fruit3").value;
+        let i = 0;
+        for (; i < listFruits.length; i++){
+            if (fruitRemove === listFruits[i]){
+                break;
+            }
+        }
+        listFruits.splice(i,1," ");
+        displayFruits();
+    }
+
+</script>
+<p id = "fruit"></p>
+</body>
+</html>

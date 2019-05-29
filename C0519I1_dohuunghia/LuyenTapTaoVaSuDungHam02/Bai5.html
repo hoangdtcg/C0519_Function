@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkMax(first, second, third){
+        let min = first;
+        if( second < min ){
+            min = second;
+        } else {
+            if ( third < min){
+                min = third;
+            }
+        }
+       return min;
+    }
+    let numberone = parseInt(prompt("Nhap so thu nhat"));
+    let numbertwo = parseInt(prompt("Nhap so thu hai"));
+    let numberthree = parseInt(prompt("Nhap so thu ba"));
+
+    document.write("So nho nhat trong ba so " + numberone + " ," + numbertwo + " ," + numberthree + " la " + (checkMax(numberone, numbertwo , numberthree)));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "met" placeholder="Nhap met">
+<button onclick="metterToFoot1()">Foot</button>
+<br>
+<input type="text" id = "foot" placeholder="Nhap foot">
+<button onclick="footToMetter1()">Met</button>
+<script>
+    function metterToFoot(metter) {
+        return 3.279 * metter;
+    }
+    function metterToFoot1() {
+        document.getElementById("met1").innerHTML = metterToFoot(parseFloat(document.getElementById("met").value));
+    }
+    function footToMetter(foot) {
+        return 0.305 * foot;
+    }
+    function footToMetter1() {
+        document.getElementById("foot1").innerHTML = footToMetter(parseFloat(document.getElementById("foot").value));
+    }
+</script>
+<p id = "met1"></p>
+<p id = "foot1"></p>
+</body>
+</html>

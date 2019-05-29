@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "ban kinh" placeholder="Nhap ban kinh">
+<button onclick="displayDiameter()">Diameter</button>
+<button onclick="displayArea()">Area</button>
+<script>
+    const PI = 3.14;
+    function circleDiameter(radius) {
+        return 2 * radius * PI;
+    }
+    
+    function circleArea(radius) {
+        return PI * radius * radius;
+    }
+
+
+    function displayDiameter() {
+        let r = parseFloat(document.getElementById("ban kinh").value);
+        document.getElementById("display").innerHTML = "Chu vi hinh tron la : " + circleDiameter(r);
+    }
+
+    function displayArea() {
+        let r = parseFloat(document.getElementById("ban kinh").value);
+        document.getElementById("display1").innerHTML = "Dien tich hinh tron la : " + circleArea(r);
+    }
+</script>
+<p id = "display"></p>
+<p id = "display1"></p>
+</body>
+</html>

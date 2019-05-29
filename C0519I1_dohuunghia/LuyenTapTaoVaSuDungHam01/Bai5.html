@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "star" placeholder="Nhap ngoi sao">
+<button onclick="checkStar1()">Click</button>
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function checkStar(star) {
+        for ( let i = 0; i < stars.length; i++){
+            if ( star === stars[i]){
+                alert("Ngoi sao " + star + " tuong ung voi chom sao " + constellation[i]);
+                break;
+            } else {
+                if (i === stars.length - 1){
+                    alert("Khong co ngoi sao " + star);
+                }
+            }
+        }
+    }
+    function checkStar1() {
+        let star1 = document.getElementById("star").value;
+        checkStar(star1);
+    }
+</script>
+</body>
+</html>
