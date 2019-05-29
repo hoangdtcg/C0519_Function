@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = prompt('Nhap so thu nhat:');
+    let num2 = prompt('Nhap so thu hai:');
+    let num3 = prompt('Nhap so thu ba:');
+    function findMin(num1,num2,num3) {
+        if (num1 < num2 && num1 < num3) {
+            min = num1;
+        } else if (num2 < num1 && num2 < num3) {
+            min = num2;
+        } else {
+            min = num3;
+        }
+        return min;
+    }
+    alert("So nho nhat trong 3 so vua nhap la: " + findMin(num1,num2,num3));
+</script>
+</body>
+</html>

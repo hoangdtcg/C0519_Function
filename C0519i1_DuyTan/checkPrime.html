@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number" value="">
+<input type="button" value="Check" onclick="checkPrime(document.getElementById('number').value)">
+<script>
+    function checkPrime(number) {
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                alert('So ' + number + " khong phai la so nguyen to");
+                return;
+            }
+        }
+        alert('So ' + number + " la so nguyen to");
+    }
+</script>
+</body>
+</html>
