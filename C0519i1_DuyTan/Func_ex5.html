@@ -6,11 +6,9 @@
 </head>
 <body>
 <script>
-    let NameOfStars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-    let OtherNameOfStars = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-    let keyword = prompt('Nhap ten ngoi sao ban muon tim:');
-    findNameOfStars(keyword);
-
+    let NameOfStars = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let OtherNameOfStars = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    inputNameOfStar();
     function findNameOfStars(keyword) {
         for (let i = 0; i < NameOfStars.length; i++) {
             if (keyword === NameOfStars[i]) {
@@ -19,6 +17,11 @@
             }
         }
         alert("Ngoi sao ban vua nhap khong ton tai");
+    }
+
+    function inputNameOfStar() {
+        let keyword = prompt('Nhap ngoi sao ban muon tim:');
+        findNameOfStars(keyword);
     }
 </script>
 </body>

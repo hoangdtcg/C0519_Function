@@ -5,13 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-<input id="inputFeet" type="number" placeholder="Feet"
-       oninput="FeetToMeters(this.value)"
-       onchange="FeetToMeters(this.value)">
-<=>
-<input id="inputMeters" type="number" placeholder="Meters"
-       oninput="MetersToFeet(this.value)"
-       onchange="MetersToFeet(this.value)">
+    <p>
+        <span>
+        <h1>Feet</h1>
+        <input id="inputFeet" type="number" placeholder="Feet"
+               oninput="FeetToMeters(this.value)"
+               onchange="FeetToMeters(this.value)">
+    </span>
+        <span>
+        <h1>Meters</h1>
+        <input id="inputMeters" type="number" placeholder="Meters"
+               oninput="MetersToFeet(this.value)"
+               onchange="MetersToFeet(this.value)">
+    </span>
+    </p>
 <script>
     function FeetToMeters(valNum) {
         valNum = parseFloat(valNum);

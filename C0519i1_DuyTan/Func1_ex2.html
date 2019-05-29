@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let radius = prompt('Nhap vao ban kinh:');
+    function calAcreage(radius) {
+        acreage = Math.PI * radius * radius;
+        return acreage;
+    }
+    function calArea(radius) {
+        area = 2 * Math.PI * radius;
+        return area;
+    }
+    alert("Chu vi hinh tron la: " + calArea(radius).toFixed(3));
+    alert("Dien tich hinh tron la: " + calAcreage(radius).toFixed(3));
+</script>
+</body>
+</html>
